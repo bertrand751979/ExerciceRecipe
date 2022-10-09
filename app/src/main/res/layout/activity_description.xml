@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/desc_photo_recipe"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="fitXY"
+            android:background="@color/black"/>
+
+            <ImageView
+                android:id="@+id/btn_desc_star_empty"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_empty_star_"/>
+
+            <TextView
+                android:id="@+id/desc_title_recipe"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Titre de la recette"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginTop="310dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/desc_ingredients_recipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Ingredient de la recette"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:layout_marginTop="340dp"
+                android:textStyle="italic"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/desc_rate_recipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Note"
+                android:layout_marginTop="360dp"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:textStyle="normal"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/desc_hour_recipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DUREE"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginTop="380dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+        <LinearLayout
+            android:id="@+id/raw_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="30dp"
+                android:text="-"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginLeft="50dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/raw_ingredient_name"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:text="Ingredient"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#050505"/>
+    </LinearLayout>
+

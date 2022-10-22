@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.exercicerecipe.GoToDescription;
 import com.example.exercicerecipe.R;
 import com.example.exercicerecipe.models.Hit;
-import com.example.exercicerecipe.models.Recipe;
 import com.example.exercicerecipe.viewHolders.RecipeViewHolder;
 
 import java.util.ArrayList;

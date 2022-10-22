@@ -64,18 +64,18 @@
                 android:textStyle="normal"
                 android:layout_marginLeft="10dp"/>
 
-            <TextView
-                android:id="@+id/raw_fav_hour_recipe"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="DUREE"
-                android:layout_marginTop="60dp"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:layout_marginRight="10dp"
-                android:textStyle="bold"
-                android:gravity="right"
-                android:layout_marginLeft="10dp"/>
+   <!-- <TextView
+        android:id="@+id/raw_fav_hour_recipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="10dp"
+        android:gravity="right"
+        android:text="DUREE"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />-->
 
         <View
             android:layout_width="match_parent"

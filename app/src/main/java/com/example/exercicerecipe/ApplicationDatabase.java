@@ -11,8 +11,9 @@ import com.example.exercicerecipe.converters.RecipeConverter;
 import com.example.exercicerecipe.models.Hit;
 
 
-@Database(entities = {Hit.class},version = 21)
-@TypeConverters({ RecipeConverter.class})
+@Database(entities = {Hit.class},version = 26)
+@TypeConverters({RecipeConverter.class})
+
 public abstract class ApplicationDatabase extends RoomDatabase {
     private static ApplicationDatabase INSTANCE;
     public abstract HitDao getHitDao();

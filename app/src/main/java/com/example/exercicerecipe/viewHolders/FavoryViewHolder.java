@@ -20,53 +20,53 @@ import com.example.exercicerecipe.models.Hit;
 import com.example.exercicerecipe.repository.RepositoryRecipe;
 
 public class FavoryViewHolder extends RecyclerView.ViewHolder {
-    private TextView vhRecipeTitle;
-    private TextView vhRecipeIngredient;
-    private TextView vhRecipeNote;
-    private ImageView vhRecipePhoto;
+    private TextView vhFavRecipeTitle;
+    private TextView vhFavRecipeIngredient;
+    private TextView vhFavRecipeNote;
+    private ImageView vhFavRecipePhoto;
     private LinearLayout vhLinearLayout;
     private ImageView vhBtnCancel;
 
     public FavoryViewHolder(@NonNull View view) {
         super(view);
-        vhRecipeTitle = view.findViewById(R.id.raw_fav_title_recipe);
-        vhRecipeIngredient = view.findViewById(R.id.raw_fav_ingredients_recipe);
-        vhRecipePhoto = view.findViewById(R.id.raw_fav_photo_recipe);
+        vhFavRecipeTitle = view.findViewById(R.id.raw_fav_title_recipe);
+        vhFavRecipeIngredient = view.findViewById(R.id.raw_fav_ingredients_recipe);
+        vhFavRecipePhoto = view.findViewById(R.id.raw_fav_photo_recipe);
         vhLinearLayout = view.findViewById(R.id.raw_fav_linear_layout);
-        vhRecipeNote = view.findViewById(R.id.raw_fav_rate_recipe);
+        vhFavRecipeNote = view.findViewById(R.id.raw_fav_rate_recipe);
         vhBtnCancel = view.findViewById(R.id.raw_fav_delete);
     }
 
-    public TextView getVhRecipeTitle() {
-        return vhRecipeTitle;
+    public TextView getVhFavRecipeTitle() {
+        return vhFavRecipeTitle;
     }
 
-    public void setVhRecipeTitle(TextView vhRecipeTitle) {
-        this.vhRecipeTitle = vhRecipeTitle;
+    public void setVhFavRecipeTitle(TextView vhFavRecipeTitle) {
+        this.vhFavRecipeTitle = vhFavRecipeTitle;
     }
 
-    public TextView getVhRecipeIngredient() {
-        return vhRecipeIngredient;
+    public TextView getVhFavRecipeIngredient() {
+        return vhFavRecipeIngredient;
     }
 
-    public void setVhRecipeIngredient(TextView vhRecipeIngredient) {
-        this.vhRecipeIngredient = vhRecipeIngredient;
+    public void setVhFavRecipeIngredient(TextView vhFavRecipeIngredient) {
+        this.vhFavRecipeIngredient = vhFavRecipeIngredient;
     }
 
-    public TextView getVhRecipeNote() {
-        return vhRecipeNote;
+    public TextView getVhFavRecipeNote() {
+        return vhFavRecipeNote;
     }
 
-    public void setVhRecipeNote(TextView vhRecipeNote) {
-        this.vhRecipeNote = vhRecipeNote;
+    public void setVhFavRecipeNote(TextView vhFavRecipeNote) {
+        this.vhFavRecipeNote = vhFavRecipeNote;
     }
 
-    public ImageView getVhRecipePhoto() {
-        return vhRecipePhoto;
+    public ImageView getVhFavRecipePhoto() {
+        return vhFavRecipePhoto;
     }
 
-    public void setVhRecipePhoto(ImageView vhRecipePhoto) {
-        this.vhRecipePhoto = vhRecipePhoto;
+    public void setVhFavRecipePhoto(ImageView vhFavRecipePhoto) {
+        this.vhFavRecipePhoto = vhFavRecipePhoto;
     }
 
     public LinearLayout getVhLinearLayout() {
@@ -77,8 +77,6 @@ public class FavoryViewHolder extends RecyclerView.ViewHolder {
         this.vhLinearLayout = vhLinearLayout;
     }
 
-
-
     public void bind(Hit hit, OnButtonDeleteClickedAction onButtonDeleteClickedAction, GoToDescription goToDescription){
         vhBtnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,14 +84,13 @@ public class FavoryViewHolder extends RecyclerView.ViewHolder {
                 onButtonDeleteClickedAction.delete(hit);
             }
         });
-
-        vhRecipeTitle.setText(hit.getRecipe().getLabel());
-        if(vhRecipePhoto!=null){
-        Glide.with(vhRecipePhoto.getContext())
+        vhFavRecipeTitle.setText(hit.getRecipe().getLabel());
+        if(vhFavRecipePhoto!=null){
+        Glide.with(vhFavRecipePhoto.getContext())
                 .load(hit.getRecipe().getImage())
-                .into(vhRecipePhoto);}
+                .into(vhFavRecipePhoto);}
         else{
-            vhRecipePhoto.setImageResource(R.drawable.ic_error);
+            vhFavRecipePhoto.setImageResource(R.drawable.ic_error);
         }
         vhLinearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,7 +99,9 @@ public class FavoryViewHolder extends RecyclerView.ViewHolder {
             }
         });
 
-
+        if(hit.getRecipe().getIngredientLines().size() == 0){
+            vhFavRecipeIngredient.setText("");
+        }if(hit.getRecipe().getIngredientLines().size() > 0){}
+        vhFavRecipeIngredient.setText(hit.getRecipe().getIngredientLines().get(0));
     }
-
 }

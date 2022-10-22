@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_search.xml" value="0.165" />
         <entry key="app/src/main/res/layout/empty_favorite_list.xml" value="0.109375" />
+        <entry key="app/src/main/res/layout/fragment_empty_favorite_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_favory.xml" value="0.1826086956521739" />
         <entry key="app/src/main/res/layout/fragment_recipe_display.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.2639902676399027" />

@@ -1,6 +1,8 @@
 package com.example.exercicerecipe.repository;
 
 import android.content.Context;
+import android.widget.ImageView;
+
 import androidx.lifecycle.LiveData;
 import com.example.exercicerecipe.ApplicationDatabase;
 import com.example.exercicerecipe.R;
@@ -17,6 +19,9 @@ public class RepositoryRecipe {
     public ArrayList<Hit> myFavoriteListRecipe = new ArrayList<>();
     public ArrayList<EditIngredient> myListEditIngredient = new ArrayList<>();
     public ArrayList<Recipe> ingredientListDisplay = new ArrayList<>();
+    public String allIngredientsText ="";
+    public String allDietLabel ="";
+    public ArrayList<Hit> recipeAlreadyFavory = new ArrayList<>();
 
     private RepositoryRecipe(){}
     private static RepositoryRecipe INSTANCE = null;
@@ -49,6 +54,14 @@ public class RepositoryRecipe {
 
     public void setMyListEditIngredient(ArrayList<EditIngredient> myListEditIngredient) {
         this.myListEditIngredient = myListEditIngredient;
+    }
+
+    public ArrayList<Hit> getRecipeAlreadyFavory() {
+        return recipeAlreadyFavory;
+    }
+
+    public void setRecipeAlreadyFavory(ArrayList<Hit> recipeAlreadyFavory) {
+        this.recipeAlreadyFavory = recipeAlreadyFavory;
     }
 
     public ArrayList<Recipe> getIngredientListDisplay() {
@@ -87,15 +100,41 @@ public class RepositoryRecipe {
     }
 
     public boolean isFavorite(Hit recipeSelected){
-        boolean result =false;
+        boolean result=  false;
         for(Hit recipefav:myFavoriteListRecipe){
-                if(recipeSelected.equals(recipefav.getRecipe().getLabel())){
+            if(recipefav.getRecipe().getUrl().equals(recipeSelected.getRecipe().getUrl())) {
+                result = true;
+            }
+        }
+        return result;
+    }
+
+
+
+
+    /*public boolean isFavorite(Hit recipeSelected){
+        boolean result =false;
+        for(Hit recipefav:recipeAlreadyFavory ){
+                if(recipeSelected.getRecipe().getLabel().equals(recipefav.getRecipe().getLabel())){
                     result = true;
                     }
                 }
         return result;
-    }
+    }*/
+
+
     public LiveData<List<Hit>> getFavoriteRecipes(Context context){
         return ApplicationDatabase.getInstance(context).getHitDao().getFavItems();
     }
+
+    public String displayIngredients(){
+        for(Hit hit2 : RepositoryRecipe.getInstance().myListRecipe){
+            allIngredientsText=allIngredientsText+""+hit2.getRecipe().getIngredients().get(0).getText();
+        }
+        return allIngredientsText;
+    }
+
+
+
+
 }

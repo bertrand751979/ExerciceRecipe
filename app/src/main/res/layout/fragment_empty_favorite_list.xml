@@ -16,7 +16,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Liste Actuellement vide !!!!"
+        android:text="Liste Favoris vide !!!!"
         android:textSize="26sp"
         android:textStyle="bold"
         android:textColor="#C10505"

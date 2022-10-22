@@ -1,4 +1,4 @@
-package com.example.exercicerecipe;
+package com.example.exercicerecipe.viewModel;
 
 import android.content.Context;
 
@@ -23,10 +23,10 @@ public class SearchActivityViewModel extends ViewModel {
     public LiveData<List<EditIngredient>> editIngredientLiveData = myListEditIngredient;
 
 
-    public void toPostMyRecipeList(){
+   /* public void toPostMyRecipeList(){
         myRecipeList.postValue(RepositoryRecipe.getInstance().getMyListRecipe());
         //myItemsList.postValue(RepositoryBook.getInstance().getMyBookList());
-    }
+    }*/
 
 
 }

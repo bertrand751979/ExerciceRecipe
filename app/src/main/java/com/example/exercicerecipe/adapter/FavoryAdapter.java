@@ -42,7 +42,6 @@ public class FavoryAdapter extends RecyclerView.Adapter<FavoryViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull FavoryViewHolder holder, int position) {
         holder.bind(listFavoryAdapter.get(position),onButtonDeleteClickedAction,goToDescription );
-
     }
 
     @Override

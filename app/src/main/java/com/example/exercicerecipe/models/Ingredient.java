@@ -4,6 +4,8 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import com.example.exercicerecipe.repository.RepositoryRecipe;
+
 import java.io.Serializable;
 public class Ingredient implements Serializable {
         public String text;
@@ -89,6 +91,7 @@ public class Ingredient implements Serializable {
         public void setImage(String image) {
                 this.image = image;
         }
+
 
 
 }

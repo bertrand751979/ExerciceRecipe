@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.exercicerecipe.R;
-import com.example.exercicerecipe.SearchActivityViewModel;
+import com.example.exercicerecipe.viewModel.SearchActivityViewModel;
 import com.example.exercicerecipe.adapter.EditIngredientAdapter;
 import com.example.exercicerecipe.models.EditIngredient;
 import com.example.exercicerecipe.models.Hit;

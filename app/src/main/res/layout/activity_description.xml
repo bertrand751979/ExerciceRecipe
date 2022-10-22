@@ -1,72 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/desc_photo_recipe"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:scaleType="fitXY"
-            android:background="@color/black"/>
+    <ImageView
+        android:id="@+id/desc_photo_recipe"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@color/black"
+        android:scaleType="fitXY" />
 
-            <ImageView
-                android:id="@+id/btn_desc_star_empty"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/ic_empty_star_"/>
+    <ImageView
+        android:id="@+id/btn_desc_star_empty"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"/>
+        <!--android:src="@drawable/ic_empty_star_" />-->
 
-            <TextView
-                android:id="@+id/desc_title_recipe"
-                android:layout_width="match_parent"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:text="Titre de la recette"
-                android:textColor="@color/black"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                android:layout_marginTop="310dp"
-                android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/desc_title_recipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="250dp"
+        android:gravity="center"
+        android:text="Titre de la recette"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/desc_ingredients_recipe"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Ingredient de la recette"
-                android:textColor="@color/black"
-                android:textSize="11sp"
-                android:layout_marginTop="340dp"
-                android:textStyle="italic"
-                android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/desc_link_to_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:textSize="10sp"
+        android:layout_marginTop="273dp"
+        android:gravity="center"
+        android:text="https://www.fjkhkjhkkkhkhkhkhkh.com"
+        android:textColor="#23026E" />
 
-            <TextView
-                android:id="@+id/desc_rate_recipe"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Note"
-                android:layout_marginTop="360dp"
-                android:textColor="@color/black"
-                android:textSize="11sp"
-                android:textStyle="normal"
-                android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/desc_ingredients_recipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="300dp"
+        android:gravity="center"
+        android:maxLines="7"
+        android:ellipsize="end"
+        android:text="Ingredient de la recette"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:textStyle="italic" />
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="570dp"
+        android:layout_marginLeft="150dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Note: "/>
 
-            <TextView
-                android:id="@+id/desc_hour_recipe"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="DUREE"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:layout_marginTop="380dp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/desc_rate_recipe"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="574dp"
+        android:gravity="center"
+        android:text="11"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:textStyle="bold" />
 
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="595dp"
+        android:src="@drawable/ic_time" />
+
+    <TextView
+        android:id="@+id/desc_hour_recipe"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="598dp"
+        android:gravity="center"
+        android:text="DUREE"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
 </RelativeLayout>
